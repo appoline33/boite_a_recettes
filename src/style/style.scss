@@ -109,22 +109,29 @@ h1{
 // Bouton de déconexion
 .disconnect{
     text-decoration: none;
-    font-family: montserrat;
+    font-family: $font_titre;
     font-size: 15px;
     font-weight: bold;
     color: white;
     margin-right: 10px;
 }
 
+// Recettes générales
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
 // Affichage des recettes
 .recette{
     display: flex;
+    margin-top: 50px;
 }
 
 // Partie textuelle
 .texte{
     width: 50%;
-    margin-top: 50px;
+    height: 100%;
 }
 
 .pseudo{
@@ -160,6 +167,7 @@ h1{
 // Partie visuelle 
 .image{
     width: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,4 +177,5 @@ h1{
         height: auto;
     }
 }
+
 

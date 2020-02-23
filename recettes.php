@@ -33,23 +33,25 @@ $req->execute();
 ?>
                 
 <!-- Affichage des éléments de la recette -->
-        <div class="recette">
-            <!-- Partie textuelle de la recette -->
-            <div class="texte">
-                <div class="pseudo"><?= $result["pseudo"] ?></div>
-                <div class="titre"><?= $result["titre"] ?></div>
-                <div class="ingredients">
-                    <h2>Ingrédients</h2>
-                    <?= $result["ingredients"] = str_replace(",", "<br>", $result["ingredients"])?>
+        <div class="container">
+            <div class="recette">
+                <!-- Partie textuelle de la recette -->
+                <div class="texte">
+                    <div class="pseudo"><?= $result["pseudo"] ?></div>
+                    <div class="titre"><?= $result["titre"] ?></div>
+                    <div class="ingredients">
+                        <h2>Ingrédients</h2>
+                        <?= $result["ingredients"] = str_replace(",", "<br>", $result["ingredients"])?>
+                    </div>
+                    <div class="etapes">
+                        <h2>Étapes</h2>
+                        <?= $result["etapes"] = str_replace(".", "<br><br>", $result["etapes"])?>
+                    </div>
                 </div>
-                <div class="etapes">
-                    <h2>Étapes</h2>
-                    <?= $result["etapes"] = str_replace(".", "<br><br>", $result["etapes"])?>
+                <!-- Partie visuelle de la recette -->
+                <div class="image">
+                    <img src="<?= $result["image"] ?>" alt="visuel inaccessible">
                 </div>
-            </div>
-            <!-- Partie visuelle de la recette -->
-            <div class="image">
-                <img src="<?= $result["image"] ?>" alt="US Cookies">
             </div>
         </div>
 

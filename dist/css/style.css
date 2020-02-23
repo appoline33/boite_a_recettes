@@ -110,13 +110,19 @@ h1 {
   margin-right: 10px;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .recette {
   display: flex;
+  margin-top: 50px;
 }
 
 .texte {
   width: 50%;
-  margin-top: 50px;
+  height: 100%;
 }
 
 .pseudo {
@@ -149,6 +155,7 @@ h1 {
 
 .image {
   width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
