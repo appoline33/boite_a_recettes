@@ -110,4 +110,52 @@ h1 {
   margin-right: 10px;
 }
 
+.recette {
+  display: flex;
+}
+
+.texte {
+  width: 50%;
+  margin-top: 50px;
+}
+
+.pseudo {
+  font-family: roboto;
+  font-size: 10px;
+  font-weight: 200;
+  margin: 20px 0 10px 10px;
+}
+
+.titre {
+  font-family: montserrat;
+  font-weight: 900;
+  font-size: 25px;
+  margin: 30px 0 10px 10px;
+  color: #ad1d45;
+}
+
+.ingredients, .etapes {
+  font-family: roboto;
+  font-size: 13px;
+  margin-left: 10px;
+}
+.ingredients h2, .etapes h2 {
+  font-family: montserrat;
+  font-weight: 700;
+  font-size: 15px;
+  margin: 30px 0 10px 10px;
+  color: #393e46;
+}
+
+.image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image img {
+  width: 400px;
+  height: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
