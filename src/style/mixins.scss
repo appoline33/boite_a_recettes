@@ -1,0 +1,13 @@
+@import "variables.scss";
+
+// Textes
+    // Titres
+    @mixin h1{
+        margin: 20px;
+        text-align: center;
+        font-family: montserrat;
+        color: $red;
+        font-size: 45px;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
