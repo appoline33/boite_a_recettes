@@ -31,12 +31,17 @@ $req = $db->prepare("SELECT pseudo, titre, ingredients, etapes, image FROM recet
 $req->bindParam(":pseudo", $_SESSION["pseudo"]);
 // 3. Éxecuter la requête
 $req->execute();
-// 4. Afficher la recette
+// 4. Compter le nombre de résultats renvoyés par la requête
+$count = $req->rowCount();
+// 5. Effectuer une condition pour la page 404
+if($count == 0){
+    echo "Pas de recettes encore enregistrées";
+}else{
+    // 6. Afficher la recette
     while($result = $req->fetch(PDO::FETCH_ASSOC)){ // FETCH sert à parcourir chaque ligne et chaque colonne de la base de données
-
 ?>
-                
-<!-- Affichage des éléments de la recette -->
+                    
+    <!-- Affichage des éléments de la recette -->
         <div class="container">
             <div class="recette">
                 <!-- Partie textuelle de la recette -->
@@ -58,25 +63,9 @@ $req->execute();
                 </div>
             </div>
         </div>
-
+    
 <?php
     }
+}
 ?>
 
-<!-- Remplacer les "," par des retours à la ligne dans la recette -->
-<?php
-// $remplace = str_replace(",", "</br>", "etapes");
-// $remplace = str_replace(",", "\n", "etapes");
-
-
-// $req2 = $db->prepare("UPDATE recettes SET etapes = REPLACE (etapes, ',', '</br>') WHERE etapes LIKE '%,%'");
-
-// $remplacant="TEST";
-// $remplacer=",";
-// $remplace=str_replace($remplacant,$remplacer,$remplace);
-
-// $result = preg_replace(",","  TEST  ", "etapes");
-// $result=preg_replace("/\r/","\n", $result);
-// echo preg_replace(","," TEST  ", $result);
-
-?>
