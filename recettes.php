@@ -27,7 +27,7 @@ session_start();
 // 1. Connection à la base de données
 require("functions/database.php");
 // 2. Préparer la requête (SELECT)
-$req = $db->prepare("SELECT pseudo, titre, ingredients, etapes, image FROM recettes WHERE pseudo = :pseudo");
+$req = $db->prepare("SELECT id, pseudo, titre, ingredients, etapes, image FROM recettes WHERE pseudo = :pseudo");
 $req->bindParam(":pseudo", $_SESSION["pseudo"]);
 // 3. Éxecuter la requête
 $req->execute();
@@ -62,7 +62,12 @@ if($count == 0){
                     <img src="<?= $result["image"] ?>" alt="visuel inaccessible">
                 </div>
             </div>
-        </div>
+
+
+            <!-- Supprimer une recette -->
+            <div class="delete_recette">
+                <a href="functions/deleteRecette.php?recette_id=<?= $result["id"] ?>">Supprimer la recette</a>
+            </div>
     
 <?php
     }
