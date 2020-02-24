@@ -10,6 +10,10 @@ session_start();
 
 <!-- Nav bar -->
 <div class="navbar">
+    <!-- Titre du site -->
+    <div class="titre_site_2">
+        <p>La Boîte à recettes</p>
+    </div>
     <!-- Bouton de déconnexion -->
     <a href="functions/disconnect.php" class="disconnect">Déconnexion</a>
 </div>

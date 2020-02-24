@@ -12,6 +12,12 @@ if(isset($_SESSION["pseudo"])){
 ?>
 
 
+<!-- Titre du site -->
+<div class="titre_site">
+    <p>La Boîte à recettes</p>
+</div>
+
+
 <!-- Formulaire de connexion de session -->
 <div class="form_login">
     <h1>Connexion</h1>

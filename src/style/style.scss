@@ -54,11 +54,28 @@ table {
 
 // Page d'accueil  *************************************************************************************************************************
 
+// Titre du site
+.titre_site{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $grey;
+    width: 100%;
+    height: 250px;
+
+    p{
+        font-family: $font_titre;
+        font-size: 55px;
+        font-weight: 900;
+        color: white;
+    }
+}
+
 .form_login{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 300px;
+    margin-top: 120px;
 }
 
 // Formulaire de contact
@@ -114,6 +131,18 @@ h1{
     font-weight: bold;
     color: white;
     margin-right: 10px;
+}
+
+// Titre du site
+.titre_site_2{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    margin-left: 10px;
+
+    p{
+        @extend .disconnect;
+    }
 }
 
 // Recettes générales
