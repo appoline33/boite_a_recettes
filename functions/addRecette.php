@@ -1,3 +1,6 @@
+<!-- Lien vers le css -->
+<link rel="stylesheet" href="../dist/css/style.css">
+
 <?php
 
 session_start();
@@ -10,12 +13,24 @@ session_start();
 <div class="form_recette">
     <h1>Ajouter une recette</h1>
     <form action="addRecetteAction.php" method="post" class="addRecette">
-        <input type="text" placeholder="Pseudo" name="pseudo">
-        <input type="text" placeholder="Titre de la recette" name="titre">
-        <input type="text" placeholder="Ingrédients" name="ingredients">
-        <input type="text" placeholder="Étapes" name="etapes">
-        <input type="text" placeholder="Image" name="image" value="https://picsum.photos/200/300">
-        <input type="submit" value="Ajouter">
+        <!-- Pseudo -->
+        <input type="text" placeholder="Pseudo" name="pseudo" class="input_pseudo">
+
+        <div class="champs">
+
+            
+            <div class="part_1">
+                <input type="text" placeholder="Titre de la recette" name="titre">
+                <input type="textarea" placeholder="Ingrédients" name="ingredients">
+            </div>
+            <div class="part_2">
+                <input type="text" placeholder="Image" name="image" value="https://picsum.photos/200/300">
+                <input type="textarea" placeholder="Étapes" name="etapes">
+            </div>
+
+
+        </div>
+        <input type="submit" value="Ajouter" class="input_ajouter">
     </form>
 </div>
 

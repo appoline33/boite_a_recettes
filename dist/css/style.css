@@ -186,11 +186,15 @@ h1 {
   height: auto;
 }
 
-.delete_recette {
+.boutons {
+  display: flex;
+}
+
+.delete_recette, .duplicate_recette {
   display: flex;
   margin: 15px 0 0 20px;
 }
-.delete_recette a {
+.delete_recette a, .duplicate_recette a {
   background-color: #393e46;
   color: white;
   font-family: montserrat;
@@ -214,6 +218,74 @@ h1 {
   padding: 10px 20px;
   border: none;
   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.836);
+}
+
+.addRecette {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 85px;
+}
+
+.champs {
+  display: flex;
+}
+
+input {
+  width: 260px;
+  margin: 10px;
+  padding: 10px 5px;
+  border: solid 1px #393e46;
+  font-size: 12px;
+}
+
+input::placeholder {
+  font-family: montserrat;
+  color: #393e46;
+  opacity: 0.7;
+}
+
+.input_pseudo {
+  width: 540px;
+}
+
+.part_1, .part_2 {
+  display: flex;
+  flex-direction: column;
+}
+.part_1 input:nth-child(2), .part_2 input:nth-child(2) {
+  height: 260px;
+}
+
+.input_ajouter {
+  background-color: #ad1d45;
+  color: white;
+  font-family: montserrat;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.836);
+  border: none;
+  width: 540px;
+}
+
+.retour_recette {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.retour_recette input {
+  background-color: #393e46;
+  color: white;
+  font-family: montserrat;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.836);
+  border: none;
+  width: 540px;
 }
 
 .list_style {

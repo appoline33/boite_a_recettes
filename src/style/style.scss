@@ -208,8 +208,13 @@ h1{
 }
 
 
-// Supprimer une recette ****************************************************************************************************************
+// Boutons de bas de recette **************************************************************************************************************
 
+.boutons{
+    display: flex;
+}
+
+// Supprimer une recette
 .delete_recette{
     display: flex;
     margin: 15px 0 0 20px;
@@ -219,8 +224,12 @@ h1{
     }
 }
 
+// Dupliquer une recette
+.duplicate_recette{
+    @extend .delete_recette;
+}
 
-// Ajouter une recette *******************************************************************************************************************
+// Bouton pour ajouter une recette ********************************************************************************************************
 
 .ajouter_recette{
     display: flex;
@@ -234,8 +243,79 @@ h1{
 }
 
 
+// Formulaire pour ajouter une recette ****************************************************************************************************
+
+.addRecette{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 85px;
+}
+
+.champs{
+    display: flex;
+}
+
+input{
+    width: 260px;
+    margin: 10px;
+    padding: 10px 5px;
+    border: solid 1px $grey;
+    font-size: 12px;
+}
+
+input::placeholder{
+    font-family: $font_titre;
+    color: $grey;
+    opacity: 0.7;
+}
+
+// Champs Pseudo
+.input_pseudo{
+    width: 540px;
+}
+
+// Titre et Ingérdients
+.part_1{
+    display: flex;
+    flex-direction: column;
+
+    input:nth-child(2){
+        height: 260px;
+    }
+}
+
+// Image et Étapes
+.part_2{
+    @extend .part_1;
+}
+
+// Bouton "Ajouter"
+.input_ajouter{
+    @include button_red();
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.836);
+    border: none;
+    width: 540px;
+}
+
+// Bouton "Retour"
+.retour_recette{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    input{
+        @include button_grey();
+        box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.836);
+        border: none;
+        width: 540px;
+    }
+}
+
 // Liste à puces des recettes *************************************************************************************************************
 
 .list_style{
     list-style: inside;
 }
+
+

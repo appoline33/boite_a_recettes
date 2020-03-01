@@ -74,15 +74,17 @@ if($count == 0){
             </div>
 
 
-            <!-- Supprimer une recette -->
-            <div class="delete_recette">
-                <a href="functions/deleteRecette.php?recette_id=<?= $result["id"] ?>">Supprimer la recette</a>
-            </div>
+            <div class="boutons">
+                <!-- Supprimer une recette -->
+                <div class="delete_recette">
+                    <a href="functions/deleteRecette.php?recette_id=<?= $result["id"] ?>">Supprimer la recette</a>
+                </div>
 
 
-            <!-- Dupliquer une recette -->
-            <div class="duplicate_recette">
-                <a href="functions/duplicateRecette.php?recette_id=<?= $result["id"] ?>">Dupliquer la recette</a>
+                <!-- Dupliquer une recette -->
+                <div class="duplicate_recette">
+                    <a href="functions/duplicateRecette.php?recette_id=<?= $result["id"] ?>">Dupliquer la recette</a>
+                </div>
             </div>
     
 <?php
