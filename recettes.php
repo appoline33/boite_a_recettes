@@ -56,11 +56,15 @@ if($count == 0){
                     <div class="titre"><?= $result["titre"] ?></div>
                     <div class="ingredients">
                         <h2>Ingrédients</h2>
-                        <?= $result["ingredients"] = str_replace(",", "<br>", $result["ingredients"])?>
+                        <ul>
+                            <?= $result["ingredients"] = str_replace(",", "<li>", $result["ingredients"])?>
+                        </ul>
                     </div>
                     <div class="etapes">
                         <h2>Étapes</h2>
-                        <?= $result["etapes"] = str_replace(".", "<br><br>", $result["etapes"])?>
+                        <ul>
+                            <?= $result["etapes"] = str_replace(".", "<li><br>", $result["etapes"])?> 
+                        </ul>
                     </div>
                 </div>
                 <!-- Partie visuelle de la recette -->
@@ -79,4 +83,3 @@ if($count == 0){
     }
 }
 ?>
-
