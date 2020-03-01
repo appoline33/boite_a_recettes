@@ -56,14 +56,14 @@ if($count == 0){
                     <div class="titre"><?= $result["titre"] ?></div>
                     <div class="ingredients">
                         <h2>Ingrédients</h2>
-                        <ul>
+                        <ul class= "list_style">
                             <?= $result["ingredients"] = str_replace(",", "<li>", $result["ingredients"])?>
                         </ul>
                     </div>
                     <div class="etapes">
                         <h2>Étapes</h2>
-                        <ul>
-                            <?= $result["etapes"] = str_replace(".", "<li><br>", $result["etapes"])?> 
+                        <ul class= "list_style">
+                            <?= $result["etapes"] = str_replace(".", "<br><br><li>", $result["etapes"])?> 
                         </ul>
                     </div>
                 </div>
@@ -77,6 +77,12 @@ if($count == 0){
             <!-- Supprimer une recette -->
             <div class="delete_recette">
                 <a href="functions/deleteRecette.php?recette_id=<?= $result["id"] ?>">Supprimer la recette</a>
+            </div>
+
+
+            <!-- Dupliquer une recette -->
+            <div class="duplicate_recette">
+                <a href="functions/duplicateRecette.php?recette_id=<?= $result["id"] ?>">Dupliquer la recette</a>
             </div>
     
 <?php
