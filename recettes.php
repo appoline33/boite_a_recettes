@@ -22,12 +22,18 @@ session_start();
 <h1>Recettes</h1>
 
 
+<!-- Ajouter une recette -->
+    <form action="functions/addRecette.php" method="post" class="ajouter_recette">
+        <input type="submit" value="Ajouter une recette" name="addRecette">
+    </form>
+
+
 <!-- Afficher les recettes -->
 <?php
 // 1. Connection à la base de données
 require("functions/database.php");
 // 2. Préparer la requête (SELECT)
-$req = $db->prepare("SELECT id, pseudo, titre, ingredients, etapes, image FROM recettes WHERE pseudo = :pseudo");
+$req = $db->prepare("SELECT id, pseudo, titre, ingredients, etapes, image FROM recettes WHERE pseudo = :pseudo ORDER BY id DESC");
 $req->bindParam(":pseudo", $_SESSION["pseudo"]);
 // 3. Éxecuter la requête
 $req->execute();
