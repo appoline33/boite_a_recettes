@@ -83,7 +83,7 @@ if($count == 0){
 
                 <!-- Dupliquer une recette -->
                 <div class="duplicate_recette">
-                    <a href="functions/duplicateRecette.php?recette_id=<?= $result["id"] ?>">Dupliquer la recette</a>
+                    <a href="duplicateRecetteForm.php?recette_id=<?= $result["id"] ?>&ingredients=<?= $result["ingredients"] ?>&etapes=<?= $result["etapes"] ?>&image=<?= $result["image"] ?>">Dupliquer la recette</a>
                 </div>
             </div>
     
