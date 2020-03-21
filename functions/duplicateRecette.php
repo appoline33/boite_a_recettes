@@ -36,8 +36,8 @@ var_dump($_POST);
 // 1. Connection à la base de données
 require("database.php");
 // 2. Préparer la requête (INSERT INTO)
-$req = $db->prepare("INSERT INTO recettes (id, titre, ingredients, etapes, image) VALUES(:recette_id, :new_title, :ingredients, :etapes, :image)");
-$req->bindParam(":recette_id", $_POST["recette_id"]);
+$req = $db->prepare("INSERT INTO recettes (titre, ingredients, etapes, image) VALUES (:new_title, :ingredients, :etapes, :image)");
+// $req->bindParam(":recette_id", $_POST["recette_id"]);
 $req->bindParam(":new-title", $_POST["new_title"]);
 $req->bindParam(":ingredients", $_POST["ingredients"]);
 $req->bindParam(":etapes", $_POST["etapes"]);
