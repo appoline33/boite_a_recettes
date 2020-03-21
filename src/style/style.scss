@@ -275,11 +275,18 @@ input::placeholder{
     width: 540px;
 }
 
+// Titres Ingerédients et Étapes
+h3{
+    @include h3();
+    text-align: center;
+}
+
 // Titre et Ingérdients
 .part_1{
     display: flex;
     flex-direction: column;
 
+    
     input:nth-child(2){
         height: 260px;
     }
@@ -317,5 +324,25 @@ input::placeholder{
 .list_style{
     list-style: inside;
 }
+
+
+// Formulaire de duplication de recette ***************************************************************************************************
+
+.form-duplicate{
+    display: flex;
+    flex-direction: column;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    input:last-child{
+        @include button_grey();
+    }
+}
+
 
 

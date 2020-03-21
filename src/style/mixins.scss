@@ -20,6 +20,14 @@
         color: $grey;
     }
 
+    @mixin h3{
+        font-family: $font_titre;
+        font-weight: 700;
+        font-size: 14px;
+        color: $red;
+        margin: 20px 0 10px 0px;
+    }
+
 // Boutons
     // Bouton rouge
     @mixin button_grey{

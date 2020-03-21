@@ -11,7 +11,8 @@ var_dump($_GET);
 <div class="form-duplicate">
     <h1>Dupliquer la recette</h1>
     <form action="functions/duplicateRecette.php" method="post">
-        <input type="text" placeholder="Titre de la recette" name="new_title"> 
+        <input type="text" placeholder="Titre de la recette" name="titre"> 
+        <input type="hidden" name="id" value="<?php echo $_GET["id"]; ?>">
         <input type="hidden" name="ingredients" value="<?php echo $_GET["ingredients"]; ?>">
         <input type="hidden" name="etapes" value="<?php echo $_GET["etapes"]; ?>">
         <input type="hidden" name="image" value="<?php echo $_GET["image"]; ?>">

@@ -16,19 +16,26 @@ session_start();
         <!-- Pseudo -->
         <input type="text" placeholder="Pseudo" name="pseudo" class="input_pseudo">
 
+        <!-- Formulaire -->
         <div class="champs">
-
-            
+            <!-- Colonnes de gauche -->
             <div class="part_1">
                 <input type="text" placeholder="Titre de la recette" name="titre">
-                <input type="textarea" placeholder="Ingrédients" name="ingredients">
+                <div class="titre_ingredients">
+                    <h3>Ingrédients</h3>
+                    <input type="textarea" placeholder="À séparer avec des virgules">
+                </div>
             </div>
+            <!-- Colonnes de droite -->
             <div class="part_2">
                 <input type="text" placeholder="Image" name="image" value="https://picsum.photos/200/300">
-                <input type="textarea" placeholder="Étapes" name="etapes">
+                <div class="titre_etapes">
+                    <h3>Étapes</h3>
+                    <input type="textarea" placeholder="À séparer avec des virgules" name="etapes">
+                </div>
             </div>
 
-
+        <!-- Bouton d'envoie -->
         </div>
         <input type="submit" value="Ajouter" class="input_ajouter">
     </form>
